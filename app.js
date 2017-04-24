@@ -17,7 +17,7 @@ request('https://weather.com/zh-CN/weather/today/l/CHXX0037:1:CH')
     console.log("温度:" + temp);
     console.log("天气:" + weather);
     console.log("更新时间:" + getTime.match(/[0-9]+:[0-9]+/g));
-  }).catch(function (e) {
-  console.log(e)
+  }).catch(function (err) {
+  console.log("网络故障")
 });
 
