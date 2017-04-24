@@ -2,14 +2,13 @@
  * Created by huangpeisong on 2017/4/24.
  */
 
-const request = require('request');
+const request = require('request-promise');
 const cheerio = require('cheerio');
 
 
-request('https://weather.com/zh-CN/weather/today/l/CHXX0037:1:CH', function (error, response, body) {
-  if (!error && response.statusCode == 200) {
-
-    var $ = cheerio.load(body);
+request('https://weather.com/zh-CN/weather/today/l/CHXX0037:1:CH')
+  .then(function (res) {
+    var $ = cheerio.load(res);
     var city = $(".today_nowcard-location").text();
     var temp = $(".today_nowcard-temp").text();
     var weather = $(".today_nowcard-phrase").text();
@@ -18,10 +17,7 @@ request('https://weather.com/zh-CN/weather/today/l/CHXX0037:1:CH', function (err
     console.log("温度:" + temp);
     console.log("天气:" + weather);
     console.log("更新时间:" + getTime);
-  }
-  else {
-    console.log("你看一下你有没有被墙了？")
-  }
+  }).catch(function (e) {
+  console.log(e)
 });
-
 
