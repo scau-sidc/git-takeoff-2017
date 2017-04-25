@@ -1,7 +1,6 @@
 /**
  * Created by huangpeisong on 2017/4/24.
  */
-
 const request = require('request-promise');
 const cheerio = require('cheerio');
 
@@ -20,4 +19,3 @@ request('https://weather.com/zh-CN/weather/today/l/CHXX0037:1:CH')
   }).catch(function (err) {
   console.log("网络故障")
 });
-
