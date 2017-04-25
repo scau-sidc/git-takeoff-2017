@@ -6,11 +6,11 @@ chmod +x hello-weather.sh
 ./hello-weather.sh
 ```
 ### 效果
-![image](http://ofx0oa4m3.bkt.clouddn.com/0425.png)
+![image](https://github.com/scau-sidc/git-takeoff-2017/blob/final-silence1772/0425.png)
 ### 实现
 没接触过shell脚本，现学现卖，实现不是很好，还请多加指教。
 
-** （shell和正则表达式真的很强大） **
+**（shell和正则表达式真的很强大）**
 
 首先获取网页内容
 ```bash
@@ -20,11 +20,11 @@ wget $url -O weather_data.html > /dev/null 2>&1
 
 因为网页内容被压缩过，全都挤在一行里，所以先处理一下将所需要的信息单独成行，再提取到tmp.log中
 
-** sed **
+**sed**
 
 输入命令：sed 's/ /\n/g' example.log。解释下命令，s是替换的标记，第一个/ /里面有一个空格，意思是查找所有含有空格的行，最后的g表明要对该行的所有空格进行查询，而不只是查询到第一个就查询下一行，第二个/\n/是一个换行符，结合前面的空格查询语法，可以对所有的空格替换成换行符。里面的命令执行后会把文本重新编排，遇到空格就换行。
 
-** grep **
+**grep**
 
 输入命令：grep 'test' test.log。  会将test.log里所有包含test的行输出。加-E参数可以加多个条件（或）
 ```bash
