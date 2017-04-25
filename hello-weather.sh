@@ -6,6 +6,7 @@ function getMsg(){
 	endLetter=`expr index "$result" \<`
 	letterLength=$[(endLetter - 2)/3]
  	msg=${result:1:letterLength}
+ 	#echo "$curlPage"
 }
 function getTemperature(){
 	result=$(echo $curlPage | 
@@ -26,8 +27,18 @@ function getWetPercent(){
 	wetPercent=${result:1:letterLength}
 }
 
+function getWindMsg(){
+	result=$(echo $curlPage | 
+	grep -E -o '风力</th><td><span class="">[^<]{1,}<' |
+	grep -E -o '>[^<]{1,}<' |
+ 	grep -o ">[^<]*<" )
+	endLetter=`expr index "$result" \<`
+	letterLength=$[(endLetter - 2)/3]
+	windMsg=${result:1:letterLength}
+}
+
 getMsg 
 getTemperature
 getWetPercent
-
-echo "广州当前天气 $msg 温度：${temperature}°C  湿度：${wetPercent} %";
+getWindMsg
+echo "广州当前天气 $msg 温度：${temperature}°C  湿度：${wetPercent} % ${windMsg}"
