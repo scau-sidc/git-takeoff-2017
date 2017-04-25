@@ -1,7 +1,16 @@
 # 获取每日天气
 
 ## VERSION 0.1
-### 功能未完善，仅供开发用
+
+### 环境要求
+`python3.X`
+
+`pip install requests`
+
+`pip install beautifulsoup4`
+
+`pip install lxml`
+
 
 数据源：[weather.com](https://weather.com)
 
