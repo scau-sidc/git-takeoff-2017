@@ -11,11 +11,11 @@ class weather:
         rec = requests.get(url=self.url)
         rec.encoding = 'utf8'
         # print(rec.text)
-        soup =BeautifulSoup(rec.text, 'lxml')
-        today_data = soup.select('.today-card-day-cloudy')[0]
+        soup = BeautifulSoup(rec.text, 'lxml')
+        today_data = soup.select('.today_nowcard-container')[0]
         # print(today_data)
         today_weather = {}
-        bow_weather ={}
+        bow_weather = {}
         print('-------------------------------------------')
         print('today weather')
         print('-------------------------------------------')
