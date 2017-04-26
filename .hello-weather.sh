@@ -1,2 +1,2 @@
 #!/bin/sh
-python hello-weather.py
+python3 hello-weather.py
