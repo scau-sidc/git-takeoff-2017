@@ -1,0 +1,7 @@
+{"id": "23.12,113.25", 
+"vt1observation": 
+
+   {"altimeter":1009.14,"barometerTrend":"升温","barometerCode":1,"barometerChange":0.34,"dewPoint":23,"feelsLike":24,"gust":null,"humidity":89,"icon":26,"observationTime":"2017-04-26T18:43:27+0800","obsQualifierCode":null,"obsQualifierSeverity":null,"phrase":"多云","precip24Hour":24.13,"snowDepth":0.0,"temperature":24,"temperatureMaxSince7am":26,"uvIndex":0,"uvDescription":"低","visibility":9.66,"windSpeed":5,"windDirCompass":"西北偏北風","windDirDegrees":340}
+ 
+    
+    }
