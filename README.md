@@ -26,8 +26,8 @@ php -v
 
 ### 开发历程
 1. 访问 weather.com ，通过 Chrome浏览器 开发者工具分析出对其api请求，返回为json格式。
-![image](https://raw.githubusercontent.com/scau-sidc/git-takeoff-2017/final-Rytia/screenshot_1.png)
+![image](https://raw.githubusercontent.com/scau-sidc/git-takeoff-2017/final-zzfly256/screenshot_1.png)
 2. 编写 php 代码，通过 file_get_content 模拟访问，并对获取的数据进行拆分显示。
 3. 根据题目要求编写 shell 脚本启动 php
 4. 以上代码经树莓派3B测试通过。
-![image](https://raw.githubusercontent.com/scau-sidc/git-takeoff-2017/final-Rytia/screenshot_2.png)
+![image](https://raw.githubusercontent.com/scau-sidc/git-takeoff-2017/final-zzfly256/screenshot_2.png)
