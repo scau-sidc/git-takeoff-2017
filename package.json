@@ -1,0 +1,9 @@
+{
+  "name": "git-takeoff-2017",
+  "version": "0.0.1",
+  "dependencies": {
+    "cheerio": "^0.22.0",
+    "fs": "0.0.1-security",
+    "request-promise": "^4.2.0"
+  }
+}
