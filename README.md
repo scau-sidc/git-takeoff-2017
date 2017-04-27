@@ -3,7 +3,8 @@
 ==============
 java版：
 --------------------------
-使用. hello-weather.sh打开
+使用. hello-weather.sh打开<br>
+需要JRE7（Java Runtime Environment 7）以上
 
         获取API
         用gson解析
